@@ -7,14 +7,14 @@ app.get("/", function(_, res){
 })
 
 app.get("/lista_clientes/:nome", function(req, res){
-    res.send("<h1> Cliente: " + req.params.nome + " </h1>");
+    res.send("<h1> Cliente Identificado: " + req.params.nome + " </h1>");
 })
 
 app.get("/novo_cliente/:nome?", function(req, res){
     var nome = req.params.nome
 
     if (nome){
-        res.send("Novo Cliente Adicionado: " + nome)
+        res.send("Novo Cliente Inserido: " + nome)
     }else{
         res.send("Precisa inserir o nome para cadastrar")
     }
